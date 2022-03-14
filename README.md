@@ -5,7 +5,7 @@
 A travel rental booking web application of the company which allows to manage the properties, i.e, add, edit & delete provided rental properties. Additionally, the API also allows an administrator to manage Rest-Inn’s customers.
 
 ## Production Link(Netify): 
-- 
+- https://priceless-mirzakhani-0f2db6.netlify.app
 ## Github Repository link: 
 - https://github.com/ZhenyaChan/Rest-Inn-Front-End
 
