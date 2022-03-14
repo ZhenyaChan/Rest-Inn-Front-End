@@ -20,11 +20,8 @@ const PropertyDescriptionPage = () => {
 
     const {id} = useParams();
 
-
     useEffect(() => {
-        const URL = `http://localhost:5000/properties/${id}`;
-
-        fetch(URL)
+        fetch(`${process.env.REACT_APP_BACKEND}/properties/${id}`)
         .then(response => response.json())
         .then(json => {
             setProperty(json.data);

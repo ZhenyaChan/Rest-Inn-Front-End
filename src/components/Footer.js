@@ -1,39 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  return (
-    <footer>
-      <div className="grid grid-col-4">
-                    <div>
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Careers</h3>
-                        <ul>
-                            <li><a href="#">Job openings</a></li>
-                            <li><a href="#">Employee success</a></li>
-                            <li><a href="#">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2018</p>
-                    </div>
+    return (
+        <footer>
+            <div className="grid grid-col-3">
+                <div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><Link to="/properties">Vacation Properties</Link></li>
+                        <li><Link to="/login">Book a Property</Link></li>
+                    </ul>
                 </div>
-    </footer>
-  );
+                <div>
+                    <h3>About</h3>
+                    <ul>
+                        <li><Link to="/about">Our Company</Link></li>
+                        <li><Link to="/about">Our Goals</Link></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li><Link to="#">Customer Service</Link></li>
+                        <li><Link to="#">Manager</Link></li>
+                    </ul>
+                </div>
+            </div>
+            <p className="copyright">Copyright: Rest-Inn © 2022 by Tran Quang Dung</p>
+        </footer>
+    );
 };
 
 export default Footer;

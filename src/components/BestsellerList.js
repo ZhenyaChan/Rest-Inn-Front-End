@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import BestSellerItem from './BestsellerItem.js';
 
 const BestsellerList = () => {
@@ -9,10 +10,7 @@ const BestsellerList = () => {
   }]);
 
   useEffect(() => {
-    const URL = "http://localhost:5000/properties?bestSeller=true";
-    
-
-    fetch(URL)
+    fetch(`${process.env.REACT_APP_BACKEND}/properties?bestSeller=true`)
     .then(response => response.json())
     .then(json => {
       setBestsellers(json.data);
@@ -24,8 +22,9 @@ const BestsellerList = () => {
   return (
     <section id="section-bestseller">
       <div className="container">
-
-        <h1>Bestsellers</h1>
+        <Link to = {`/properties/${'bestSeller'}/${'true'}`}>
+          <h1>Bestsellers</h1>
+        </Link>
         <div className="grid grid-gap-1 grid-row-gap-2 grid-col-4">
           {bestsellers.map(bestseller => (<BestSellerItem key={bestseller._id} id={bestseller._id} propertyTitle={bestseller.propertyTitle} image={bestseller.propertyPhoto}/>))}
         </div>

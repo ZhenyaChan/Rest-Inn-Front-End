@@ -17,16 +17,12 @@ const PropertyList = () => {
   }]);
 
   useEffect(() => {
-    const URL = "http://localhost:5000/properties";
-    
-
-    fetch(URL)
+    fetch(`${process.env.REACT_APP_BACKEND}/properties`)
     .then(response => response.json())
     .then(json => {
       setProperties(json.data);
     })
     .catch(err => console.log(err));
-
   }, []);
 
 
@@ -36,7 +32,7 @@ const PropertyList = () => {
 
         <h1>Vacation Properties</h1>
         <div className="grid grid-gap-1 grid-row-gap-2 grid-col-4">
-          {properties.map(property=> (<PropertyItem key={property._id} id={property._id} propertyTitle={property.propertyTitle} propertyPhoto={property.propertyPhoto} description={property.description}/>))}
+          {properties.map(property => (<PropertyItem key={property._id} id={property._id} propertyTitle={property.propertyTitle} propertyPhoto={property.propertyPhoto} description={property.description}/>))}
         </div>
       </div>
     </section>

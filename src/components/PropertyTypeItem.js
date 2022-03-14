@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PropertyTypeItem = (props) => {
   return (
     <div className="property-type-card">
-      <Link to = {`/properties?propertyType=${props.id}`}>
+      <Link to = {`/properties/${'propertyType'}/${props.title}`}>
         <img src={props.image} alt="propertyTypePic" />
       </Link>
 

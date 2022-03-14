@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { IoSearchCircleSharp } from "react-icons/io5";
 const Header = () => {
   return (
     <header>
@@ -30,8 +30,14 @@ const Header = () => {
                 <Link to="/login">Login</Link>
                 <Link to="/register">Register</Link>
               </div>
-            </li> 
-          </ul>  
+            </li>
+            <div className="box">
+            <form >
+              <input type="text" class="input" name="txt" onmouseout="document.search.txt.value = ''" />
+            </form>
+            <i><IoSearchCircleSharp /></i>
+          </div>
+          </ul>
         </nav>
       </div>
     </header>
