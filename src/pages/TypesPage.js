@@ -26,7 +26,6 @@ const TypesPage = () => {
         .then(response => response.json())
         .then(json => {
             setType(json.data);
-            console.log(json.data);
         })
         .catch(err => console.log(err));
     }, []);
